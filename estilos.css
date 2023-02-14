@@ -13,7 +13,13 @@ header {
     background: #2fcdcd;
     justify-content: space-between;
 }
-
+nav{
+    gap: 3px;
+}
+nav a{
+    background-color: aqua;
+    border-radius: 10px;
+}
 header img {
     width: 300px;
     height: 100%;
@@ -21,7 +27,6 @@ header img {
 
 main {
     width: 100%;
-    height: 83vh;
 }
 
 main div {
@@ -40,11 +45,10 @@ main div {
     align-items: center;
     height: 70px;
 }
-.nav_1 button{
+.nav_1 img{
     width: 50px;
     height: 50px;
     border-radius: 100px;
-    background-color: lightsalmon;
     color:black;
 }
 h3 {
@@ -57,9 +61,10 @@ h3 {
     padding-top: 1rem;
     border: 1px solid red;
     gap: 0.5rem;
+    align-items: center;
 }
+
 footer {
-    min-height: 5vh;
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
@@ -71,7 +76,7 @@ footer img {
 
 @media (max-width:768px) {
     header {
-        height: 25vh;
+        /* height: 25vh; */
         display: flex;
         flex-direction: column;
         background: #2fcdcd;
@@ -84,6 +89,13 @@ footer img {
     main{
         height: 50vh;
     }
+    .category{
+        display: inline-block;
+        gap: 1px;
+    }
+    .category #search{
+        width: 150px;
+    }
     main {
         height: auto;
     }
@@ -91,7 +103,6 @@ footer img {
         display: flex !important;
         align-items: center;
         flex-direction: column;
-        /* width: 100% !important; */
     }
 }
 
@@ -105,5 +116,4 @@ footer img {
     nav {
         display: none !important;
     }
-
 }
