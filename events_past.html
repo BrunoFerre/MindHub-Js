@@ -19,53 +19,49 @@
         <figure class="pt-2">
             <img src="./assets/logo_amazing_events.png" alt="logo">
         </figure>
+        <div class="oculto">
+            <div class="dropdown col-12">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Events Past</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./index.html">Home</a></li>
+                  <li><a class="dropdown-item" href="./events.html">Upcoming Events</a></li>
+                  <li><a class="dropdown-item" href="./contact.html">Contact</a></li>
+                  <li><a class="dropdown-item" href="./stats.html">Stats</a></li>
+                </ul>
+              </div>
+        </div>
         <nav class="navbar fs-4">
-            <a href="index.html" class="nav-link p-1 text-danger-emphasis">Home</a>
+            <a href="./index.html" class="nav-link p-1 text-danger-emphasis">Home</a>
             <a href="./events.html" class="nav-link p-1 text-danger-emphasis">Upcoming Events</a>
             <a href="#" class="nav-link p-1 text-danger-emphasis">Past Events</a>
             <a href="./contact.html" class="nav-link p-1 text-danger-emphasis">Contact</a>
             <a href="./stats.html" class="nav-link p-1 text-danger-emphasis">Stats</a>
         </nav>
     </header>
-    <main class="d-flex flex-column h-100 col-12" id="main-past">
+    <main class="d-flex flex-column " id="main-past">
         <section class="nav_1 col-12">
             <a href="./events.html"><img src="./assets/arrow-left.svg" alt=""></a>
             <h3>Past Events</h3>
             <a href="./contact.html"><img src="./assets/arrow-right.svg" alt=""></a>
         </section>
-        <div class="category">
-            <label for=""><input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                Categoty</label>
-            <label for="">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                Categoty</label>
-            <label for="">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                Categoty</label>
-            <label for="" >
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                Categoty</label>
-            <label for="" class="l">Buscar 
-                <input type="search" name="" id="search">
-            </label>
-        </div>
-        <div id="cards_past" class="d-flex justify-content-center col-12 h-100">
-            <div class="card col-4 ">
-                <div class="bg-success-subtle">
-                    <img src="./assets/cinema.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-center fs-3"> title</h5>
-                        <p class="card-text fs-5">Lorem, ipsum dolor.</p>
-                        <div class="prices fs-5">
-                            <label for="text">Price: $190</label>
-                            <a class="btn btn-info ">Ver mas</a>
-                        </div>
-                    </div>
+        <div class="row row-cols-2 row-cols-md-3 g-3 w-100  justify-content-center pt-4">
+            <div class="col">
+              <div class="card h-100">
+                <img src="./assets/costume_party.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 </div>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <label for="price">Price:190</label> </small>
+                    <button type="button" class="btn btn-secondary">Pay</button>
+                </div>
+              </div>
             </div>
-        </div>
     </main>
-    <footer class="bg-secondary" id="footer-past">
+    <footer class="bg-secondary d-flex" id="footer-past">
         <div class="d-flex gap-5 mt-2 mb-0 bg-secondary">
             <a href=""> <img src="./assets/facebook.svg" alt="facebook"> </a>
             <a href=""> <img src="./assets/instagram.svg" alt="instagram"> </a>

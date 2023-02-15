@@ -80,10 +80,17 @@ footer img {
     header {
         height: auto;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
         background: #2fcdcd;
     }
-
+    .navbar{
+        display: none !important;
+    }
+    .dropdown{
+        display: flex !important;
+    }
     nav {
         display: flex;
         flex-wrap: wrap;

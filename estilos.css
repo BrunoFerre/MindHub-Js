@@ -15,9 +15,13 @@ header {
 nav{
     gap: 3px;
 }
+.dropdown{
+    display: none !important;
+}
 nav a{
     background-color: aqua;
     border-radius: 10px;
+
 }
 header img {
     width: 300px;
@@ -35,8 +39,8 @@ main div {
     padding-top: 1rem;
     padding-bottom: 0.5rem;
 }
-#cards_past{
-    height: 71.4vh !important;
+#main-past{
+    height: 84vh !important;
 }
 .nav_1 {
     background-color: salmon;
@@ -54,6 +58,7 @@ main div {
 h3 {
     font-size: 45px;
     font-weight: bold;
+    justify-content: ;
 }
 
 .category{
@@ -116,12 +121,18 @@ td:hover{
 }
 @media (max-width:768px) {
     header {
-        /* height: 25vh; */
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
         background: #2fcdcd;
     }
-
+    .navbar{
+        display: none !important;
+    }
+    .dropdown{
+        display: flex !important;
+    }
     nav {
         display: flex;
         flex-wrap: wrap;
@@ -146,14 +157,29 @@ td:hover{
     }
 }
 
-@media(max-width:560px) {
+@media(max-width:420px) or (max-height:720px) {
     header {
         height: 12vh;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .navbar{
+        display: none !important;
+    }
+    .dropdown{
+        display: flex !important;
     }
     main{
         height: auto;
     }
+    #footer-past{
+        display: none !important;
+    }
     nav {
         display: none !important;
+    }
+    footer{
+        min-height: auto !important;
     }
 }
