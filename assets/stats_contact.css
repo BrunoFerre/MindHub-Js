@@ -24,6 +24,9 @@ nav a{
     background-color: aqua;
     border-radius: 10px;
 }
+.oculto{
+    display: none;
+}
 main {
     height: 84vh;
     width: 100%;
@@ -88,7 +91,7 @@ footer img {
     .navbar{
         display: none !important;
     }
-    .dropdown{
+    .oculto{
         display: flex !important;
     }
     nav {
@@ -127,6 +130,9 @@ footer img {
     }
     nav {
         display: none !important;
+    }
+    .oculto{
+        display: flex !important;
     }
 }
 @media (max-width:1350px){
