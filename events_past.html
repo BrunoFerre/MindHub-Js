@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header class="bg-success-subtle p-1">
+    <header class="bg-success-subtle p-1 col-12">
         <figure class="pt-2">
             <img src="./assets/logo_amazing_events.png" alt="logo">
         </figure>
@@ -23,11 +23,11 @@
             <a href="index.html" class="nav-link p-1 text-danger-emphasis">Home</a>
             <a href="./events.html" class="nav-link p-1 text-danger-emphasis">Upcoming Events</a>
             <a href="#" class="nav-link p-1 text-danger-emphasis">Past Events</a>
-            <a href="" class="nav-link p-1 text-danger-emphasis">Contact</a>
-            <a href="" class="nav-link p-1 text-danger-emphasis">Stats</a>
+            <a href="./contact.html" class="nav-link p-1 text-danger-emphasis">Contact</a>
+            <a href="./stats.html" class="nav-link p-1 text-danger-emphasis">Stats</a>
         </nav>
     </header>
-    <main class="d-flex flex-column h-100">
+    <main class="d-flex flex-column h-100 col-12" id="main-past">
         <section class="nav_1 col-12">
             <a href="./events.html"><img src="./assets/arrow-left.svg" alt=""></a>
             <h3>Past Events</h3>
@@ -49,8 +49,8 @@
                 <input type="search" name="" id="search">
             </label>
         </div>
-        <div id="cards2" class="d-flex flex-wrap justify-content-center col-12">
-            <div class="card col-6">
+        <div id="cards_past" class="d-flex justify-content-center col-12 h-100">
+            <div class="card col-4 ">
                 <div class="bg-success-subtle">
                     <img src="./assets/cinema.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -65,7 +65,7 @@
             </div>
         </div>
     </main>
-    <footer class="bg-secondary">
+    <footer class="bg-secondary" id="footer-past">
         <div class="d-flex gap-5 mt-2 mb-0 bg-secondary">
             <a href=""> <img src="./assets/facebook.svg" alt="facebook"> </a>
             <a href=""> <img src="./assets/instagram.svg" alt="instagram"> </a>
