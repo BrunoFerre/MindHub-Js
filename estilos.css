@@ -5,6 +5,7 @@
     list-style: none;
     box-sizing: border-box;
     font-family: 'IBM Plex Mono', monospace;
+    background-color: darkcyan;
 }
 
 header {
