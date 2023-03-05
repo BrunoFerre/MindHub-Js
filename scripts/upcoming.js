@@ -1,10 +1,11 @@
-const UpcomingCards=document.querySelector("#cards2")
+const UpcomingCards = document.querySelector("#cards2")
 UpcomingCards.innerHTML= UpcomingEvents()
-function UpcomingEvents(){
-        let cards= ''
-        for (const evento of data.events) {
-            if (evento.date > data.currentDate) {
-                cards+=` <div class='card' style='width: 18rem;'>
+function UpcomingEvents() {
+  let cards = ''
+  // let array = data.events.filter((categorias) => categorias.category == "Food Fair")
+  for (const evento of data.events) {
+    if (evento.date > data.currentDate) {
+      cards += ` <div class='card' style='width: 18rem;'>
                 <img src='${evento.image}' class='card-img-top' alt='...'>
                 <div class='card-body bg-primary'>
                   <h5 class='card-title fs-4 text-center'>${evento.name}</h5>
@@ -19,8 +20,8 @@ function UpcomingEvents(){
                   <label class='card-link'>Capacity:${evento.capacity}</label>
                   <label class='card-link m-0'>Assistance: ${evento.assistance}</label>
                 </div>
-              </div>`  
-            }               
+              </div>`
     }
-        return cards
-    }
+  }
+  return cards
+}
