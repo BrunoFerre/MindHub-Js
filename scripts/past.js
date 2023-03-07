@@ -2,9 +2,9 @@ const UpcomingCards=document.querySelector("#cards2")
 UpcomingCards.innerHTML= UpcomingEvents()
 function UpcomingEvents(){
         let cards= ''
-        for (const evento of data.events) {
+        for ( evento of data.events) {
             if (evento.date < data.currentDate) {
-                cards+=` <div class='card' style='width: 18rem;'>
+                cards+=` <div class='card ' style='width: 18rem;'>
                 <img src='${evento.image}' class='card-img-top' alt='...'>
                 <div class='card-body bg-primary'>
                   <h5 class='card-title fs-4 text-center'>${evento.name}</h5>

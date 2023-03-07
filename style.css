@@ -22,6 +22,10 @@ nav{
     gap: 0.5rem;
     font-weight: bold;
 }
+.navbar  a{
+    background-color: aliceblue;
+    border-radius: 15px;
+}
 .nav_1{
     display: flex;
     justify-content: space-around;
