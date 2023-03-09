@@ -58,7 +58,8 @@ function FiltrarCardCheckBox() {
   checkbox.forEach(function (inputs) {
     categoriasFiltradas.push(inputs.value)
   })
-  array = data.events.filter((categoria)=>categoria.category.includes(categoriasFiltradas.toString()))
+  array = data.events.filter((categoria)=>categoria.category.includes(categoriasFiltradas))
+  console.log(array);
   for ( categorias of array) {
     contenedorCard.innerHTML+=` <div class='card' style='width: 28rem;'>
     <img src='${categorias.image}' class='card-img-top' alt='...'>
