@@ -15,6 +15,8 @@ header img{
 main{
     display: flex;
     flex-direction: column;
+    min-height: 80vh;
+    background-color: lightblue;
 }
 nav{
     height: 30px auto;
@@ -25,6 +27,21 @@ nav{
 .navbar  a{
     background-color: aliceblue;
     border-radius: 15px;
+}
+#header_detalles{
+    min-height: 15vh;
+}
+#detalles{
+    height: 80vh;
+}
+#img_detalles{
+    height: 300px;
+}
+#footer_detalles{
+    min-height: 7vh;
+    justify-content: space-around;
+    align-items: center;
+    align-self: flex-end;
 }
 .nav_1{
     display: flex;
@@ -47,6 +64,7 @@ nav{
 #cards2{
     background-color: lightblue;
     gap:0.5rem;
+    height: 100%;
 }
 .card-img-top{
     height: 200px;
@@ -63,29 +81,24 @@ nav{
     margin: 0px !important;
 }
 footer img{
-    height: 30px;
+    height: 50px;
 }
 footer{
     min-height: 8vh ;
     display: flex;
     justify-content: space-around;
-}
-.oculto{
-    display: none;
-}
-.category{
-    display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem;
 }
-.ase{
+#contacto_{
+    height: 72vh;
+}
+
+.con{
     display: flex;
-    height: 76.7vh;
-    justify-content: center;
-    padding-top: 0.5rem;
+    width: 100%;
+   justify-content: space-evenly;
 }
+
 .contact{
     display: flex;
     flex-direction: column;
@@ -100,7 +113,9 @@ footer{
     height: 100px;
     width: 100%;
 }
-
+#search{
+    height: 40px;
+}
 @media (max-width:973px) {
     header{
        display:block;
@@ -109,15 +124,19 @@ footer{
     #nav-res{
        justify-content: flex-center;
     }
+    #search{
+        height: 20px;
+    }
 }
 @media (max-width:720px){
     .category{
-        display: inline-flex;
-        flex-wrap: wrap;
-        margin: 0 !important;
+        display: none;
     }
     .nav_1 img{
         height: 20px;
+    }
+    #search{
+        height: 39px;
     }
 }
 @media (max-width:387px) {
