@@ -19,4 +19,3 @@ function Eventos(evento) {
   }
   return cards
 }
-
