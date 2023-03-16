@@ -8,7 +8,6 @@ function UpcomingEvents() {
                 <img src='${evento.image}' class='card-img-top' alt='...'>
                 <div class='card-body bg-primary'>
                   <h5 class='card-title fs-4 text-center'>${evento.name}</h5>
-                  <p class='card-text fs-5'>${evento.description}</p>
                 </div>
                 <ul class='list-group list-group-flush'>
                   <li class='list-group-item bg-info'>Category: ${evento.category}</li>
@@ -16,8 +15,7 @@ function UpcomingEvents() {
                   <li class='list-group-item bg-info'>Price: ${evento.price}</li>
                 </ul>
                 <div class='card-footer bg-info'>
-                  <label class='card-link'>Capacity:${evento.capacity}</label>
-                  <label class='card-link m-0'>Assistance: ${evento.assistance}</label>
+                      <a href='./details.html?id=${evento._id}' class="btn btn-primary">Ver mas</a>
                 </div>
               </div>`
     }
