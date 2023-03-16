@@ -70,21 +70,10 @@ footer{
     display: flex;
     justify-content: space-around;
 }
-.oculto{
-    display: none;
-}
+
 .category{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-}
-.ase{
-    display: flex;
-    height: 76.7vh;
-    justify-content: center;
-    padding-top: 0.5rem;
+    display: inline;
+    text-align: center;
 }
 .contact{
     display: flex;
@@ -112,7 +101,7 @@ footer{
 }
 @media (max-width:720px){
     .category{
-        display: inline-flex;
+        display: inline;
         flex-wrap: wrap;
         margin: 0 !important;
     }
