@@ -79,7 +79,6 @@ function TraerDatos() {
         </tr>`;
           }
           contador++
-          console.log(EventosAsistenciaDesc);
         }
         return tabla
       }

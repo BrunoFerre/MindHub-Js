@@ -10,20 +10,19 @@ async function TraerDatos() {
     fecha = datosApis.currentDate
     eventos = datosApis.events.filter(events=>events.date>fecha)
     console.log(eventos);
-    PintarCards(eventos,fecha,contenedor)
+    PintarCards(eventos,contenedor)
     pintarInputs(eventos,clase)
   })
   .catch(error => console.log(error.message))
 }
 TraerDatos()
-function PintarCards(array,date, lugar) {
+function PintarCards(array,lugar) {
   if (array.length == 0) {
     lugar.innerHTML=`<p class="display-1">No such elements</p>`
     return false
   }
   tarjetas = ''
   array.forEach(events => {
-    if (events.date>date) {   
       tarjetas+=` <div class='card' style='width: 28rem;'>
       <img src='${events.image}' class='card-img-top' alt='...'>
       <div class='card-body bg-primary'>
@@ -38,7 +37,6 @@ function PintarCards(array,date, lugar) {
       <a href='./details.html?id=${events._id}' class="btn btn-primary">Ver mas</a>
       </div>
     </div>`
-    }
   })
   lugar.innerHTML=tarjetas
 }
@@ -48,10 +46,22 @@ function pintarInputs(arrayDatos,ubicacion) {
   arrayDatos.forEach(events=>{
     if (opciones.indexOf(events.category) === -1) {
       opciones.push(events.category)
-      label+=`<label class="p-2"><input onchange="FiltrarCheck()" class="form-check-input" name="status"
+      label+=`<label class="p-2"><input onchange="FiltrarEventos()" class="form-check-input" name="status"
        type="checkbox"  value="${events.category}" id="${events.category}">${events.category}</label>`
     }
     //  onchange="FiltrarCardCheckBox()"
   })
   ubicacion.innerHTML=label
 }
+function FiltrarEventos() {
+  const search = buscador.value.toLowerCase()
+  let categoriasFiltradas = []
+  let checkbox = document.querySelectorAll('input[name="status"]:checked')
+  checkbox.forEach(function (inputs) {
+    categoriasFiltradas.push(inputs.value)
+  })
+  let arrayNuevo = eventos.filter(events =>events.description.toLowerCase().includes(search) && (categoriasFiltradas.length==0 || categoriasFiltradas.includes(events.category)))
+  console.log(arrayNuevo);
+  PintarCards(arrayNuevo, contenedor)
+}
+buscador.addEventListener('keyup', FiltrarEventos)
