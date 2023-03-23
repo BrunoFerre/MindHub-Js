@@ -14,6 +14,9 @@
 </head>
 
 <body>
+    <div id="app">
+
+    
     <header class="bg-success-subtle p-1 col-12">
         <figure class="pt-2">
             <img src="./assets/logo_amazing_events.png" alt="logo">
@@ -33,13 +36,31 @@
             <a href="./events.html"><img src="./assets/arrow-right.svg" alt=""></a>
         </section>
         <div class="con bg-success-subtle">
-
-            <div class="category fs-5">
+            
+            <div v-for="categories of category" class="category fs-5">
+                <input class="form-check-input" name="status" type="checkbox" :value="categories" :id="categories" v-model="catSel">
+                <label class="p-2" :for="categories">{{categories}}</label>
             </div>
-
-            <input type="search" name="buscar"   id="search" placeholder="Search Description">
+            <input v-model="text" type="search" name="buscar"   id="search" placeholder="Search Description">
         </div>
+        {{filtroDoble}}
         <div id="cards2" class="d-flex flex-wrap justify-content-center pt-1" >
+            <h2 v-if="events.length==''" class="display-1 fw-bolder">Not Events</h2>
+            <div v-for="event of events " class="card" style="width: 18rem;">
+                <img :src="event.image" class="card-img-top" alt="...">
+                <div class="card-body bg-primary">
+                  <h5 class="card-title">{{event.name}}</h5>
+                </div>
+                <ul class='list-group list-group-flush'>
+                    <li class='list-group-item bg-info'>Category: {{event.category}}</li>
+                    <li class='list-group-item bg-info'>Place: {{event.place}}</li>
+                    <li class='list-group-item bg-info'>Price: {{event.price}}</li>
+                  </ul>
+                  <div class="card-footer bg-info">
+                    <a href="./details.html?id=event._id" class="btn btn-primary">More Info</a>
+                  </div>
+              </div>
+
 
          </div>
     </main>
@@ -51,10 +72,13 @@
         </div>
         <h4 class="mt-2 mb-0 bg-secondary fs-2">Cohort</h4>
     </footer>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-        <script src="./scripts/main.js"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <!-- <script src="./scripts/main.js"></script> -->
+        <script src="./scripts/index.js"></script>
 </body>
 
 </html>
